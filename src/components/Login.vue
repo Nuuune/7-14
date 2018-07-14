@@ -60,7 +60,6 @@ export default {
   },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
       options: [
         {value: 'xx小学1', text: 'xx小学1'},
         {value: 'xx小学2', text: 'xx小学2'},

@@ -38,6 +38,7 @@ export default {
 <style scoped>
 .r-col {
   padding-left: 4px !important;
+  max-width: 100%;
 }
 .full-height {
   height: 100%;

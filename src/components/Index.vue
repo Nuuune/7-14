@@ -110,8 +110,8 @@
 
     </div>
 
-    <div class="flex ali-center full-height" style="background: #f2f1ef" slot="contentR">
-
+    <div class="flex ali-center full-height" style="background: #fff" slot="contentR">
+      <router-view />
     </div>
 
   </Layout>
@@ -193,26 +193,5 @@ export default {
   padding-left: 10px;
   color: #fff;
   line-height: 34px;
-}
-.content-header {
-  height: 40px;
-  position: relative;
-  width: 100%;
-  font-size: 20px;
-  background: #fafafa;
-}
-.content-header .right, .content-header .left {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.content-header .right {
-  right: 0;
-}
-.content-header .left {
-  left: 0;
 }
 </style>
