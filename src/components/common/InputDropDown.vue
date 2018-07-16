@@ -50,7 +50,12 @@ export default {
 </script>
 
 <style>
+.options::-webkit-scrollbar {
+  display: none;
+}
 .options {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
   position: absolute;
   width: 75%;
   padding: 5px 0;
