@@ -58,7 +58,7 @@ input:focus {
   align-items: center;
   width: 100%;
   position: relative;
-  border: 2px solid #dbdbdb;
+  border: 1px solid #dbdbdb;
   border-radius: 7px;
   margin-bottom: 10px;
 }

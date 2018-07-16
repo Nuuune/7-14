@@ -3,9 +3,9 @@
     <div class="row full-height">
       <!-- 左边屏-S -->
       <div class="clear-padding flex" style="flex: 1; max-width: 410px;">
-        <div class="header">
+        <!-- <div class="header">
           <slot name="headerL">左屏头</slot>
-        </div>
+        </div> -->
         <div class="flex-i-full">
           <slot name="contentL">左屏身</slot>
         </div>
@@ -13,9 +13,9 @@
       <!-- 左边屏-E -->
       <!-- 右边屏-S -->
       <div class="col-8 clear-padding r-col flex" style="flex: 2;">
-        <div class="header">
+        <!-- <div class="header">
           <slot name="headerR">右屏头</slot>
-        </div>
+        </div> -->
         <div class="flex-i-full">
           <slot name="contentR">右屏身</slot>
         </div>

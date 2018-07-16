@@ -1,7 +1,7 @@
 <template>
   <Layout>
 
-    <div class="flex flex-row ali-center full-height" slot="headerL">
+    <!-- <div class="flex flex-row ali-center full-height" slot="headerL">
       <div class="logo"></div>
       <span class="logo-font">鼎创科技</span>
     </div>
@@ -10,7 +10,7 @@
       <span class="header-btn"><i class="fas fa-times"></i></span>
       <span class="header-btn"><i class="fas fa-times"></i></span>
       <span class="header-btn"><i class="fas fa-times"></i></span>
-    </div>
+    </div> -->
 
     <div class="flex ali-center full-height" slot="contentL">
       <div class="login-photo">
