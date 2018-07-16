@@ -2,7 +2,7 @@
   <div class="flex full-width ali-center">
     <div class="flex flex-center content-header">
       <span>详情</span>
-      <span class="left fcolor-primary" style="font-size: 13px; padding: 0 16px"><i class="fas fa-angle-left" style="padding-right: 8px;"></i>返回</span>
+      <span @click="goBack" class="left fcolor-primary" style="font-size: 13px; padding: 0 16px"><i class="fas fa-angle-left" style="padding-right: 8px;"></i>返回</span>
     </div>
     <div class="flex ali-center full-width" style="padding: 0 28px">
       <div class="flex ali-center detail-header">
@@ -31,7 +31,9 @@ export default {
     }
   },
   methods: {
-
+    goBack: function () {
+      window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/index/InBannerDetail/1')
+    }
   }
 }
 </script>

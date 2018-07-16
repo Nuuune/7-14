@@ -21,10 +21,10 @@
       <div class="full-width">
         <swiper
           :options="swiperOption">
-         <swiper-slide><div><img style="width: 100%; height: 165px;" src="../assets/banner_1.jpg" /><div class="banner-des">门户改版政务公开等页面设想</div></div></swiper-slide>
-         <swiper-slide><div><img style="width: 100%; height: 165px;" src="../assets/banner_1.jpg" /><div class="banner-des">门户改版政务公开等页面设想</div></div></swiper-slide>
-         <swiper-slide><div><img style="width: 100%; height: 165px;" src="../assets/banner_1.jpg" /><div class="banner-des">门户改版政务公开等页面设想</div></div></swiper-slide>
-         <swiper-slide><div><img style="width: 100%; height: 165px;" src="../assets/banner_1.jpg" /><div class="banner-des">门户改版政务公开等页面设想</div></div></swiper-slide>
+         <swiper-slide><div @click="toDetail(1)"><img style="width: 100%; height: 165px;" src="../assets/banner_1.jpg" /><div class="banner-des">门户改版政务公开等页面设想</div></div></swiper-slide>
+         <swiper-slide><div @click="toDetail(2)"><img style="width: 100%; height: 165px;" src="../assets/banner_1.jpg" /><div class="banner-des">门户改版政务公开等页面设想</div></div></swiper-slide>
+         <swiper-slide><div @click="toDetail(3)"><img style="width: 100%; height: 165px;" src="../assets/banner_1.jpg" /><div class="banner-des">门户改版政务公开等页面设想</div></div></swiper-slide>
+         <swiper-slide><div @click="toDetail(4)"><img style="width: 100%; height: 165px;" src="../assets/banner_1.jpg" /><div class="banner-des">门户改版政务公开等页面设想</div></div></swiper-slide>
          <div class="swiper-pagination" style="text-align: right; padding-right: 10px; bottom: 6px;" slot="pagination"></div>
        </swiper>
       </div>
@@ -32,37 +32,37 @@
 
       <div class="icon-group flex full-width">
         <div class="flex flex-row flex-around">
-          <div class="flex ali-center icon-btn">
+          <div @click="toModel" class="flex ali-center icon-btn">
             <div class="icon-img"></div>
             <span>学校介绍</span>
           </div>
-          <div class="flex ali-center icon-btn">
+          <div @click="toModel" class="flex ali-center icon-btn">
             <div class="icon-img"></div>
             <span>学校介绍</span>
           </div>
-          <div class="flex ali-center icon-btn">
+          <div @click="toModel" class="flex ali-center icon-btn">
             <div class="icon-img"></div>
             <span>学校介绍</span>
           </div>
-          <div class="flex ali-center icon-btn">
+          <div @click="toModel" class="flex ali-center icon-btn">
             <div class="icon-img"></div>
             <span>学校介绍</span>
           </div>
         </div>
         <div class="icon-group flex flex-row flex-around">
-          <div class="flex ali-center icon-btn">
+          <div @click="toModel" class="flex ali-center icon-btn">
             <div class="icon-img"></div>
             <span>学校介绍</span>
           </div>
-          <div class="flex ali-center icon-btn">
+          <div @click="toModel" class="flex ali-center icon-btn">
             <div class="icon-img"></div>
             <span>学校介绍</span>
           </div>
-          <div class="flex ali-center icon-btn">
+          <div @click="toModel" class="flex ali-center icon-btn">
             <div class="icon-img"></div>
             <span>学校介绍</span>
           </div>
-          <div class="flex ali-center icon-btn">
+          <div @click="toModel" class="flex ali-center icon-btn">
             <div class="icon-img"></div>
             <span>学校介绍</span>
           </div>
@@ -74,7 +74,7 @@
       <div class="full-width" style="font-size: 14px; border-bottom: 1px solid #ebebeb;">
         <div class="flex flex-row flex-between full-width ali-center" style="padding: 12px; border-top: 1px solid #ebebeb">
           <div class="list-title">最新新闻</div>
-          <div class="list-des">更多 <i class="fas fa-angle-right"></i></div>
+          <div @click="toNews" class="list-des">更多 <i class="fas fa-angle-right"></i></div>
         </div>
         <div class="flex flex-row flex-between full-width ali-center" style="padding: 12px; border-top: 1px solid #ebebeb">
           <div><span class="red-tag">最新</span>我校庆祝第30届教师节</div>
@@ -99,7 +99,7 @@
       </div>
 
       <div class="flex flex-between flex-row full-width" style="background: #fafafa; padding: 4px 5px;">
-        <div class="flex flex-row ali-center">
+        <div @click="toLogin" class="flex flex-row ali-center">
           <img src="../assets/login_photo.png" style="width:46px; height:46px" />
           <span class="fcolor-primary">请登录</span>
         </div>
@@ -151,6 +151,18 @@ export default {
     },
     setPwd: function (val) {
       this.pwd = val
+    },
+    toModel: function () {
+      this.$router.push('/index/modelList')
+    },
+    toNews: function () {
+      this.$router.push('/index/newsList')
+    },
+    toDetail: function (id) {
+      this.$router.push(`/index/InBannerDetail/${id}`)
+    },
+    toLogin: function () {
+      this.$router.push('/index/login')
     }
   }
 }

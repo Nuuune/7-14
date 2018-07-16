@@ -29,7 +29,7 @@
         <div class="lab text-right">
           <span class="fcolor-primary text-normal">忘记密码？</span>
         </div>
-        <button type="button" class="btn full-width fcolor-white bg-primary">登 陆</button>
+        <button @click="login" type="button" class="btn full-width fcolor-white bg-primary">登 陆</button>
       </div>
     </div>
 
@@ -80,6 +80,13 @@ export default {
     },
     setPwd: function (val) {
       this.pwd = val
+    },
+    login: function () {
+      if (this.company && this.account && this.pwd) {
+        this.$router.replace('/index/InBannerDetail/1')
+      } else {
+        this.$toast('表单未填完')
+      }
     }
   }
 }

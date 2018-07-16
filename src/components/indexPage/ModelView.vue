@@ -11,7 +11,7 @@
         class="full-width"
         style="height: 85vh; overflow-y: scroll; padding-right: 17px;"
       >
-        <InItem v-for="(item, index) in data" :key="index" :data="item" />
+        <InItem @onClick="toDetail" v-for="(item, index) in data" :key="index" :data="item" />
       </List>
     </div>
   </div>
@@ -23,11 +23,11 @@ import { List } from 'vant'
 import InItem from '../common/InItem'
 
 const fakeData = [
-  {img: '/static/img/list_img.png', title: '第四教育署举行第六届小学班主任论坛', tag: '信息公开', time: '2016-05-16'},
-  {img: '/static/img/list_img.png', title: '第四教育署举行第六届小学班主任论坛', tag: '信息公开', time: '2016-05-16'},
-  {img: '', title: '第四教育署举行第六届小学班主任论坛', tag: '信息公开', time: '2016-05-16'},
-  {img: '/static/img/list_img.png', title: '第四教育署举行第六届小学班主任论坛', tag: '信息公开', time: '2016-05-16'},
-  {img: '/static/img/list_img.png', title: '第四教育署举行第六届小学班主任论坛', tag: '信息公开', time: '2016-05-16'}
+  {id: 1, img: '/static/img/list_img.png', title: '第四教育署举行第六届小学班主任论坛', tag: '信息公开', time: '2016-05-16'},
+  {id: 2, img: '/static/img/list_img.png', title: '第四教育署举行第六届小学班主任论坛', tag: '信息公开', time: '2016-05-16'},
+  {id: 3, img: '', title: '第四教育署举行第六届小学班主任论坛', tag: '信息公开', time: '2016-05-16'},
+  {id: 4, img: '/static/img/list_img.png', title: '第四教育署举行第六届小学班主任论坛', tag: '信息公开', time: '2016-05-16'},
+  {id: 5, img: '/static/img/list_img.png', title: '第四教育署举行第六届小学班主任论坛', tag: '信息公开', time: '2016-05-16'}
 ]
 
 export default {
@@ -52,6 +52,9 @@ export default {
           this.finished = true
         }
       }, 500)
+    },
+    toDetail (id) {
+      this.$router.push(`/index/InBannerDetail/${id}`)
     }
   }
 }

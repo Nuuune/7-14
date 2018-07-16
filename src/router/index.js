@@ -12,7 +12,6 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      alias: '/',
       path: '/index',
       name: 'Index',
       component: Index,
@@ -36,6 +35,7 @@ export default new Router({
       ]
     },
     {
+      alias: '/',
       path: '/login1',
       name: 'Login',
       component: Login

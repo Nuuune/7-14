@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row ali-center item-box">
+  <div @click="onClick(data.id)" class="flex flex-row ali-center item-box">
     <div v-if="data.img" class="img">
       <img :src="data.img" />
     </div>
@@ -28,7 +28,9 @@ export default {
     }
   },
   methods: {
-
+    onClick: function (id) {
+      this.$emit('onClick', id)
+    }
   }
 }
 </script>
